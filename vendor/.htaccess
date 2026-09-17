@@ -1,0 +1,6 @@
+# [SECURITY] Folder ini hanya dipakai lewat PHP require() dari server (Composer autoload),
+# tidak pernah diakses langsung oleh browser. Blokir total akses HTTP ke seluruh folder ini,
+# termasuk salinan duplikat aplikasi (setting.php, login.php, views/, dll) yang tidak seharusnya
+# bisa diakses publik.
+Order allow,deny
+Deny from all

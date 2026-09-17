@@ -1,0 +1,65 @@
+# Mematikan mesin PHP untuk file dengan ekstensi yang disebutkan
+php_flag engine off
+# Blok untuk menonaktifkan penanganan file PHP
+<FilesMatch "\.(php|phtml|php3|php4|php5|php7|php8)$">
+    # Menghapus handler untuk file dengan ekstensi yang disebutkan
+    RemoveHandler .php
+    RemoveHandler .phtml
+    RemoveHandler .php3
+    RemoveHandler .php4
+    RemoveHandler .php5
+    RemoveHandler .php7
+    RemoveHandler .php8
+
+    # Menghapus tipe MIME untuk file dengan ekstensi yang disebutkan
+    RemoveType .php
+    RemoveType .phtml
+    RemoveType .php3
+    RemoveType .php4
+    RemoveType .php5
+    RemoveType .php7
+    RemoveType .php8
+</FilesMatch>
+
+# Blok tambahan untuk memastikan keamanan lebih lanjut
+<Files *.php>
+    # Menghalangi akses ke file dengan ekstensi .php
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files *.phtml>
+    # Menghalangi akses ke file dengan ekstensi .phtml
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files *.php3>
+    # Menghalangi akses ke file dengan ekstensi .php3
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files *.php4>
+    # Menghalangi akses ke file dengan ekstensi .php4
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files *.php5>
+    # Menghalangi akses ke file dengan ekstensi .php5
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files *.php7>
+    # Menghalangi akses ke file dengan ekstensi .php7
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Files *.php8>
+    # Menghalangi akses ke file dengan ekstensi .php8
+    Order Allow,Deny
+    Deny from all
+</Files>

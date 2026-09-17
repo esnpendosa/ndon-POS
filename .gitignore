@@ -1,0 +1,5 @@
+.antigravity/
+logs/
+*.stackdump
+.DS_Store
+Thumbs.db
